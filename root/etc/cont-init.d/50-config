@@ -1,0 +1,8 @@
+#!/usr/bin/with-contenv bash
+
+find /data -maxdepth 1 ! -name data -exec ln -sf '{}' /app/ \;
+
+# permissions
+chown -R abc:abc \
+	/config \
+	/app/peqphpeditor
